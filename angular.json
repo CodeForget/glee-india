@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {"input": "./node_modules/bootstrap/scss/bootstrap.scss"}
             ],
             "scripts": []
           },
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Glee-india"
+    }
+  },
+  "defaultProject": "Glee-india",
+  "cli": {
+    "analytics": "cbe62610-3a74-46e4-b827-d5df9f683ea5"
+  }
 }
