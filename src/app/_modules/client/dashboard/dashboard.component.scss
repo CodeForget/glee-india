@@ -1,0 +1,270 @@
+a{
+    text-decoration:none;
+}
+
+  .occassions {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+.occassions ul {
+    display: table;
+    width: 100%;
+}
+
+.occassions li {
+    display: table-cell;
+    padding: 10px 5px;
+    list-style: none;
+    min-height: 132px;
+    vertical-align: top;
+    width: 11.11%;
+}
+
+.occassions li a {
+    display: block;
+}
+
+.occassions li figure img {
+    display: inline-block;
+    transition: all ease-in-out 0.25s;
+    background: #fff;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.occassions li figure:hover img,
+.occassions li figure:hover span.sprite-svg,
+.category a:hover .abroad-gifts {
+    transform: translate(0px, -3px);
+}
+
+.occassions li figcaption {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #222;
+    line-height: 20px;
+    position: relative;
+    z-index: 9;
+}
+.occassions li figcaption:hover {
+    font-weight:500;
+    color:#FD475C !important;
+}
+.occassions .view-all {
+    top: 10px;
+}
+.sprite-svg {
+    background: #fff url(https://i7.fnp.com/assets/images/custom/new-desk-home/occasions-icons/Desktop&-Mobile-Icons-19August.png);
+    display: block;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 600%;
+    width: 90px;
+    height: 90px;
+    -webkit-transition: all ease-in-out 0.25s;
+    transition: all ease-in-out 0.25s;
+    background-position-y: 0!important;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+    position: relative;
+}
+ 
+.sprite-svg.fd {
+    background-position: -113px -780px !important
+}
+
+.sprite-svg.holi {
+    background-position: -4px -670px !important
+}
+
+.sprite-svg.rakhi {
+    background-position: -445px -670px !important
+}
+
+.sprite-svg.christmas {
+    background-position: -337px -225px !important
+}
+
+.sprite-svg.christmas1 {
+    background-position: 0px -330px !important
+}
+
+.sprite-svg.new-year {
+    background-position: -226px -224px !important
+}
+
+.sprite-svg.birthday2 {
+    background-position: -113px 0px !important
+}
+
+.sprite-svg.birthday1 {
+    background-position: -338px -558px !important
+}
+
+.sprite-svg.flowers {
+    background-position: 0px 0px !important
+}
+
+.sprite-svg.flowers1 {
+    background-position: -448px -224px !important
+}
+
+.sprite-svg.flowers2 {
+    background-position: -114px -339px !important
+}
+
+.sprite-svg.cakes {
+    background-position: -224px 0px !important
+}
+
+.sprite-svg.cakes1 {
+    background-position: -446px -336px !important
+}
+
+.sprite-svg.plants {
+    background-position: -336px 0px !important
+}
+
+.sprite-svg.plants1 {
+    background-position: -226px -339px !important
+}
+
+.sprite-svg.anniversary {
+    background-position: -448px 0px !important
+}
+
+.sprite-svg.anniversary2 {
+    background-position: -336px -336px !important
+}
+
+.sprite-svg.anniversary1 {
+    background-position: -443px -558px !important
+}
+
+.sprite-svg.personalised_gifts {
+    background-position: 0px -114px !important
+}
+
+.sprite-svg.new-arrival {
+    background-position: -112px -114px !important
+}
+
+.sprite-svg.international {
+    background-position: -335px -117px !important
+}
+
+.sprite-svg.international-rakhi {
+    background-position: -2px -780px !important
+}
+
+.sprite-svg.combo {
+    background-position: -224px -114px !important
+}
+
+.sprite-svg.chocolate {
+    background-position: -444px -114px !important
+}
+
+.sprite-svg.decorations {
+    background-position: 0px -227px !important
+}
+
+.sprite-svg.valentine {
+    background-position: 0px -446px !important
+}
+
+.sprite-svg.valentine1 {
+    background-position: -224px -446px !important
+}
+
+.sprite-svg.valentine2 {
+    background-position: -450px -446px !important
+}
+
+.sprite-svg.for-her {
+    background-position: -336px -446px !important
+}
+
+.sprite-svg.for-him {
+    background-position: -227px -446px !important
+}
+
+.sprite-svg.gift-card {
+    background-position: -227px -446px !important
+}
+
+.sprite-svg.womens-day {
+    background-position: -227px -558px !important
+}
+
+.sprite-svg.md {
+    background-position: -226px -670px !important
+}
+
+#for-icons:before {
+    right: 26.5%;
+}
+
+#him-icons:before {
+    right: 16%;
+}
+
+.sprite-svg.new-arrival1 {
+    background-position: -448px -225px !important
+}
+
+.sprite-svg.digital_gifts {
+    background-position: -228px -114px !important
+}
+
+.sprite-svg.midnight {
+    background-position: -4px -335px !important
+}
+
+.sprite-svg.flowersNew {
+    background-position: -448px -340px !important;
+}
+
+.sprite-svg.plantsNew {
+    background-position: -4px -448px !important;
+}
+
+.sprite-svg.plantsNew1 {
+    background-position: -444px -448px !important;
+}
+
+.sprite-svg.personalised_giftsNew {
+    background-position: -114px -448px !important;
+}
+
+.sprite-svg.kc {
+    background-position: -226px -448px !important;
+}
+
+.sprite-svg.bhai-dooj {
+    background-position: -336px -448px !important;
+} 
+
+.product-item {
+    .product-item-content {
+        border: 1px solid var(--surface-d);
+        border-radius: 3px;
+        margin: .3rem;
+        text-align: center;
+        padding: 2rem 0;
+        // background-color:rgb(238, 216, 220);
+    }
+
+    .product-image {
+        width: 50%;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+    }  
+}
