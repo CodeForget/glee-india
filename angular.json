@@ -28,9 +28,24 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/quill/dist/quill.snow.css",
+              {
+                "input": "./node_modules/bootstrap/scss/bootstrap.scss"
+              },
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "./node_modules/jquery/dist/jquery.js"
+              },
+              {
+                "input": "./node_modules/bootstrap/dist/js/bootstrap.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +138,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Glee-india"
+    }
+  },
+  "defaultProject": "Glee-india",
+  "cli": {
+    "analytics": "cbe62610-3a74-46e4-b827-d5df9f683ea5"
+  }
 }
