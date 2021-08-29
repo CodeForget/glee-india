@@ -2,6 +2,10 @@ a{
     text-decoration:none;
 }
 
+.carouselm{
+    margin-top: 75px !important;
+}
+
   .occassions {
     display: block;
     width: 100%;
@@ -267,4 +271,8 @@ a{
         width: 50%;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
     }  
+}
+
+.add-p{
+    padding: 1rem !important;
 }
