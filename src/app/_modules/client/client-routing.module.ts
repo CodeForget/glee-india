@@ -1,9 +1,28 @@
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {ProductlistComponent} from './productlist/productlist.component'
 
 const routes: Routes = [
-  {path:'',component:DashboardComponent}
+  // { 
+  //   path:'', 
+  //   redirectTo:'main', 
+  //   pathMatch:'full'
+  // },
+  {
+    path:'main',component:HomeComponent,
+    children:[
+      {
+        path:'',
+        component:DashboardComponent
+      },
+      {
+        path:'productlist',
+        component:ProductlistComponent
+      }
+]}
 ];
 
 @NgModule({
