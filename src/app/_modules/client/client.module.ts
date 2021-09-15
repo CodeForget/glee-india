@@ -6,10 +6,20 @@ import {CarouselModule} from 'primeng/carousel';
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import {TabViewModule} from 'primeng/tabview';
+import {DataViewModule} from 'primeng/dataview';
+import {PanelModule} from 'primeng/panel';
+import {DropdownModule} from 'primeng/dropdown';
+import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
+import {RatingModule} from 'primeng/rating';
+import {RippleModule} from 'primeng/ripple';
+
 
 import { HeaderComponent } from '../../_shared/header/header.component';
 import { FooterComponent } from '../../_shared/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
+import { ProductlistComponent } from './productlist/productlist.component';
 
 
 @NgModule({
@@ -17,7 +27,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
     HeaderComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent,
+    ProductlistComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +37,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CarouselModule,
     ButtonModule,
     ToastModule,
-    TabViewModule
+    TabViewModule,
+    DataViewModule,
+    PanelModule,
+    DropdownModule,
+    DialogModule,
+    InputTextModule,
+    RatingModule,
+    RippleModule
+
+
    
   ]
 })
