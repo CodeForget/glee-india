@@ -6,13 +6,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {ProductlistComponent} from './productlist/productlist.component'
 
 const routes: Routes = [
-  // { 
-  //   path:'', 
-  //   redirectTo:'main', 
-  //   pathMatch:'full'
-  // },
   {
-    path:'main',component:HomeComponent,
+    path:'',component:HomeComponent,
     children:[
       {
         path:'',

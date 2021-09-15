@@ -1,26 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+// Assets
+@import "./app/_shared/SCSS/config";
+@import "./app/_shared/SCSS/variables";
+@import "./app/_shared/SCSS/mixin";
+@import "./app/_shared/SCSS/utilities";
+
 body{
-    min-height: 75rem;
-    padding-top: 3.5rem;
     background-color: rgb(238, 216, 220);
-    //background: rgb(113,113,120);
-    //background: linear-gradient(180deg, rgba(113,113,120,0.577468487394958) 10%, rgba(238,216,220,0.5802696078431373) 36%);    
-}
+   }
 
 
 .p-carousel .p-carousel-indicators .p-carousel-indicator button {
-    display: none !important;
-    // background-color: #f11b56ad !important;
-    // width: 2rem;
-    // height: 0.5rem;
-    // transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
-    // border-radius: 0;
+    display: none !important; 
   }
-//   .p-carousel .p-carousel-indicators .p-carousel-indicator button:hover {
-//     background: #dee2e6 !important;
-//   }
-//   .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-//     background: #2a2d30 !important;
-//     color: #495057 !important;
-//   }
