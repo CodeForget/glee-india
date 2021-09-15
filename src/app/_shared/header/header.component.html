@@ -1,53 +1,209 @@
-<div>
-    <nav class="navbar navbar-expand-lg navbar bg navbar-fixed-top ">
-        <div class="container-fluid navbar-inverse ">
-          <a class="navbar-brand " routerLink='' >Glee India</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+  <!-- todo: Top Info bar -->
+
+  <div class="text-light p-2 bg-purple-dark-20">
+    <div class="container-fluid row text-wrap">
+      <!--todo: Support -->
+      <div class="col-sm-12 col-lg-4 col-md-4 d-flex flex-row">
+        <i class="bi bi-headset text-white pe-1"></i>
+        <span class="text-muted me-1">Support</span>
+        <a href="tel:00331254566151" class="text-muted hover-link text-decoration-none">(00)331254566151</a>
+      </div>
+      <!--todo: Info carousel -->
+      <div id="info-top-carousel" class="col-sm-8 col-lg-4 col-md-4 carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-white">
+          <div class="carousel-item active">
+            <span>Get instant and lifetime access to you course!</span>
+          </div>
+          <div class="carousel-item">
+            <span>Money back within 30 days.</span>
+          </div>
+          <div class="carousel-item">
+            <span>Friendly 24/7 customer support.</span>
+          </div>
+          <div class="carousel-item">
+            <span>We possess SSL / Secure сertificate</span>
+          </div>
+        </div>
+      </div>
+      <!--todo: Language & currency -->
+
+      <div class="col-sm-4 col-lg-4 col-md-4 text-end align-items-center">
+        <div class="btn-group dropdown disable-autohide">
+          <button class="btn btn-sm dropdown-toggle px-2 text-light" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-flag-fill me-2"></i> Eng / $
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-              <li class="nav-item navbar-inverse">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <ul class="dropdown-menu my-1 bg-purple-ligher-50">
+            <li class="dropdown-item">
+              <select class="form-select form-select-sm bg-purple-ligher-50">
+                <option value="usd">$ USD</option>
+                <option value="eur">€ EUR</option>
+                <option value="ukp">£ UKP</option>
+                <option value="jpy">¥ JPY</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <!-- todo: Cart btn -->
+
+        <a href="#" class="position-relative p-1" data-bs-toggle="offcanvas" data-bs-target="#Cart"
+          aria-controls="Cart">
+          <i class="bi bi-cart bg-light text-dark rounded-circle p-1">
+          </i>
+          <span class="
+                badge
+                position-absolute
+                top-0
+                start-100
+                translate-middle
+                rounded-pill
+                bg-danger
+              ">+2</span>
+        </a>
+
+        <!--todo:  Cart Content -->
+
+        <div id="Cart" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header bg-purple-dark">
+            <h5 class="text-light">CART</h5>
+            <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <!-- card body -->
+          <div class="offcanvas-body">
+            <!-- card body > check out -->
+            <div class="row mb-5">
+              <div class="col mb-3">
+                <div class="
+                      d-flex
+                      mb-3
+                      text-purple-dark
+                      justify-content-between
+                    ">
+                  <h4>Subtotal</h4>
+                  <h4>$ 41.98</h4>
+                </div>
+                <form>
+                  <div class="d-flex justify-content-between">
+                    <input type="text" class="form-controle" placeholder="Promo code " required />
+                    <button type="submit" class="btn btn-outline-danger">
+                      Apply promo code
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <button class="btn btn-danger m-auto shadow w-100">
+                <i class="bi bi-credit-card me-2"> </i>Proceed to checkout
+              </button>
+            </div>
+            <!-- todo: cart items -->
+            <div class="row">
+              <!-- todo: cart item-1 -->
+              <div class="card border-0 mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="../../../assets/1.jpg" alt="" class="img-fluid rounded-start" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body text-purple-dark pt-sm-0">
+                      <h6 class="card-title">
+                        Chocolate mud cupcakes
+                      </h6>
+                      <div class="row">
+                        <p class="col-4 text-primary">$15.99</p>
+                        <input type="number" class="col-4 h-50" placeholder="1" min="0" />
+                        <a href="#" class="col-4 text-danger" data-bs-toggle="tooltip" title="Remove">
+                          <i class="bi bi-x-circle m-auto"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- todo: cart item-2 -->
+              <div class="card border-0 mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="../../../assets/21.jpg" class="img-fluid rounded-start"
+                      alt="..." />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body text-purple-dark pt-sm-0">
+                      <h6 class="card-title">
+                        Chocolate birthday cake
+                      </h6>
+                      <div class="row">
+                        <p class="col-4 text-primary">$25.99</p>
+
+                        <input type="number" class="col-4 h-50" placeholder="1" min="0" />
+                        <a href="#" class="col-4 text-danger" data-bs-toggle="tooltip" title="Remove"><i
+                            class="bi bi-x-circle"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- todo: Navigation  -->
+
+  <nav class="
+        navbar navbar-expand-lg navbar-dark
+        bg-purple-dark
+        navbar-sticky
+      ">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <!-- <img src="./Assets/img/Logo/ecommerce.png" alt="logo" class="d-line-block aling-text-top" 
+          style="height: 24px" />-->
+        GleeIndia
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navigation"
+        aria-controls="Navigation" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="Navigation">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Cake</a>
+            <ul class="dropdown-menu bg-purple-ligher-50">
+              <li>
+                <a href="#Product-gallery" class="dropdown-item">Front-End</a>
               </li>
-              <li class="nav-item navbar-inverse">
-                <a class="nav-link active" aria-current="page" href="#">Cake</a>
+              <li>
+                <a href="#Product-gallery" class="dropdown-item">Back-End</a>
               </li>
-              <li class="nav-item navbar-inverse">
-                <a class="nav-link active" aria-current="page" href="#">Flowers</a>
+              <li>
+                <hr class="dropdown-divider" />
               </li>
-              <li class="nav-item navbar-inverse">
-                <a class="nav-link active" aria-current="page" href="#">Bellon</a>
-              </li>
-              <li class="nav-item navbar-inverse">
-                <a class="nav-link active" aria-current="page" href="#">Personalise</a>
+              <li>
+                <a href="#Product-gallery" class="dropdown-item">Full Stack</a>
               </li>
             </ul>
-          </div>
-          <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item navbar-inverse">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <i class="pi pi-shopping-cart" style="font-size: 1.5rem"></i>
-                  </a>
-                </li>
-                <li class="nav-item navbar-inverse">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <i class="pi pi-shopping-cart" style="font-size: 1.5rem"></i>
-                  </a>
-                </li>
-                <li class="nav-item navbar-inverse">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <i class="pi pi-user" style="font-size: 1.5rem"></i>
-                  </a>
-                </li>
-                <li class="nav-item navbar-inverse">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <i class="pi pi-question-circle" style="font-size: 1.5rem"></i>
-                  </a>
-                </li>
-              </ul>
-            </div> -->
-        </div>
-      </nav>
-</div>
+          </li>
+          <li class="nav-item">
+            <a href="#Collaborate" class="nav-link">Flowers</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#Contact" class="nav-link">Bellon</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Contact" class="nav-link">Personalise</a>
+          </li>
+  <li>
+    <form class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex">
+      <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+    </form>
+  </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
