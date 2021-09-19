@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import { CoreModule } from './_core/core.module';
 import { ClientModule } from './_modules/client/client.module'
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,6 +19,7 @@ import { ProductsService } from './_core/_services/products.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CoreModule.forRoot(),
     FormsModule,
     HttpClientModule,
     ClientModule,
