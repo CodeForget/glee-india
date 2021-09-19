@@ -20,6 +20,7 @@ import { FooterComponent } from '../../_shared/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ProductlistComponent } from './productlist/productlist.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ProductlistComponent } from './productlist/productlist.component';
     FooterComponent,
     DashboardComponent,
     HomeComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    ProductdetailsComponent
   ],
   imports: [
     CommonModule,
