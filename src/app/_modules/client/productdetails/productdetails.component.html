@@ -5,7 +5,7 @@
         <div class="d-flex flex-column justify-content-center sticky-fixed" style="top:24vh;">
           <div class="main_image">
             <img
-              src="https://i1.fnp.com/images/pr/x/v20210325113542/fudge-brownie-cake-half-kg_3.jpg"
+              [src]="product.Mainimg"
               id="main_product_image"
               width="350"
             />
@@ -47,11 +47,11 @@
       <div class="col-md-6">
         <div class="p-3 right-side">
           <div class="d-flex justify-content-between align-items-center">
-            <h3>Fudge Brownie Cake Half kg</h3>
+            <h3>{{product.Productname}}</h3>
             <span class="heart"><i class="bx bx-heart"></i></span>
           </div>
           <div class="mt-2 pr-3 content"></div>
-          <h3>$430.99</h3>
+          <h3>{{product.Sellprice}}</h3>
           <div class="ratings d-flex flex-row align-items-center">
             <div class="d-flex flex-row">
               <i class="bx bxs-star"></i> <i class="bx bxs-star"></i>
@@ -65,13 +65,9 @@
           <!-- end  -->
           <div class="mt-5">
             <span class="fw-bold">Cackes</span>
-            <div class="colors">
+            <div class="d-flex justify-content-between align-items-center text-white colors">
               <ul id="marker">
-                <li id="marker-1"></li>
-                <li id="marker-2"></li>
-                <li id="marker-3"></li>
-                <li id="marker-4"></li>
-                <li id="marker-5"></li>
+                <li *ngFor="let v of varient" id="'marker-'+v.Varid">{{v.Weight}} Kg</li>
               </ul>
             </div>
           </div>
@@ -91,7 +87,7 @@
           <div>
             <div class="mt-3">
               <h4>Description</h4>
-              <p></p>
+              <p>{{product.description}}</p>
               <p><b>Product Details:</b></p>
               <ul>
                 <li>Cake Flavour- Truffle</li>

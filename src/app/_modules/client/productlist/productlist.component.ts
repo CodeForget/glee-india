@@ -24,10 +24,10 @@ export class ProductlistComponent implements OnInit {
 
   ngOnInit(): void {
     debugger;
-    this.productService.getProductsSmall().then(data => {
-			this.products = data;
-      debugger;
-		});
+    // this.productService.getProductsSmall().then(data => {
+		// 	this.products = data;
+    //   debugger;
+		// });
     
         this.sortOptions = [
             {label: 'Price High to Low', value: '!price'},

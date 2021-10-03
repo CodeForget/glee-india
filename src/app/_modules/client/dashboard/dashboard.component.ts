@@ -34,9 +34,15 @@ export class DashboardComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.productService.getProductsSmall().then(products => {
-			this.products = products;
-		});
+    this.getAllProductList();
   }
 
+
+  getAllProductList(){
+    this.productService.getProducts().subscribe(data=>{
+      debugger;
+      console.log(data);
+      this.products=data;
+    });
+  }
 }

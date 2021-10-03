@@ -1,41 +1,67 @@
-import { Component, OnInit,Inject, AfterViewInit, ViewChild, ElementRef, Renderer2} from '@angular/core';
-// import { WINDOW } from '../../../_core/_services/window.service';
+import { Component, OnInit, Inject, AfterViewInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { forkJoin, Observable } from 'rxjs';
+import { mergeMap, switchMap } from 'rxjs/operators';
+import { ProductsService } from '../../../_core/_services/products.service';
+import { Product } from '../../../_core/_models/product';
+
 
 @Component({
   selector: 'app-productdetails',
   templateUrl: './productdetails.component.html',
   styleUrls: ['./productdetails.component.scss']
 })
-export class ProductdetailsComponent implements OnInit,AfterViewInit {
+export class ProductdetailsComponent implements OnInit, AfterViewInit {
 
-  constructor( private renderer: Renderer2) {
+  pId: number;
+  product: Product;
+  varient:any;
+  private param$:any;
+
+  constructor(
+    private productService: ProductsService, 
+    private route: ActivatedRoute) {
 
   }
 
-@ViewChild('scroll') element:ElementRef;
+
 
   ngOnInit(): void {
-   // window.addEventListener('scroll', this.scrollEvent, true);
+
+    this.param$=this.route.params.subscribe(params => {
+      debugger;
+      this.pId = +params['id'];
+      this.getProductDetails(+params['id']);
+    });
   }
+  
   ngAfterViewInit() {
 
-    // let el = this.element.nativeElement;
-    // this.renderer.setStyle(el, 'color', 'white');
-    // this.renderer.setStyle(el, 'background', 'red');
-
   }
 
-  ngOnDestroy() {
-   // window.removeEventListener('scroll', this.scrollEvent, true);
+  getProductDetails(param) {
+
+    let productDetails$ = this.productService.getProductDetails(param);
+    let varient$ = this.productService.getProductVarient(param);
+
+   this.param$= forkJoin([productDetails$,varient$]).subscribe(results => {
+      debugger;
+      console.log(results);
+      this.product = results[0];
+      this.varient=results[1];
+      
+    });
   }
-  // scrollEvent = (event: any): void => {
-  //   const n = event.srcElement.scrollingElement.scrollTop;
-  // }
 
   changeImage(element) {
     debugger;
     var main_prodcut_image = document.getElementById('main_product_image') as HTMLImageElement;
     console.log(element);
     main_prodcut_image.src = element.currentTarget.src;
+  }
+
+  ngOnDestroy() {
+    this.param$.unsubscribe();
+
   }
 }
