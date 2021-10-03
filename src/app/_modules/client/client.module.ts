@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { ClientRoutingModule } from './client-routing.module';
 
@@ -34,6 +35,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     ProductdetailsComponent
   ],
   imports: [
+    BrowserModule,
     CommonModule,
     ClientRoutingModule,
     CarouselModule,

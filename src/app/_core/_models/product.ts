@@ -1,12 +1,12 @@
 export interface Product {
-    id?:string;
-    code?:string;
-    name?:string;
-    description?:string;
-    price?:number;
-    quantity?:number;
-    inventoryStatus?:string;
-    category?:string;
-    image?:string;
-    rating?:number;
+    pid: string;
+    Productname: string;
+    sku: string;
+    Vendorid: number;
+    mrp: number;
+    Sellprice: number;
+    date_add: string;
+    active: boolean;
+    Mainimg: string;
+    Description: string;
 }

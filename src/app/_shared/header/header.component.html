@@ -12,7 +12,7 @@
       <div id="info-top-carousel" class="col-sm-8 col-lg-4 col-md-4 carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner text-white">
           <div class="carousel-item active">
-            <span>Get instant and lifetime access to you course!</span>
+            <span>Get instant and lifetime access for Cakes!</span>
           </div>
           <div class="carousel-item">
             <span>Money back within 30 days.</span>
@@ -21,7 +21,7 @@
             <span>Friendly 24/7 customer support.</span>
           </div>
           <div class="carousel-item">
-            <span>We possess SSL / Secure сertificate</span>
+            <span>We are Fresh Cakes Deliver Leader</span>
           </div>
         </div>
       </div>
@@ -148,28 +148,26 @@
   </div>
   <!-- todo: Navigation  -->
 
-  <nav class="
-        navbar navbar-expand-lg navbar-dark
-        bg-purple-dark ">
+  <nav class="navbar navbar-expand-sm navbar-expand-lg navbar-dark bg-purple-dark">
     <div class="container-fluid">
       <a href="#" class="navbar-brand">
         <!-- <img src="./Assets/img/Logo/ecommerce.png" alt="logo" class="d-line-block aling-text-top" 
           style="height: 24px" />-->
         GleeIndia
       </a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navigation" aria-controls="Navigation"
-        aria-expanded="false">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="Navigation">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a href="#" class="nav-link">Home</a>
+          <li class="nav-item">
+            <a [routerLink]="['/']" class="nav-link active" aria-current="page">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Cake</a>
-            <ul class="dropdown-menu bg-purple-ligher-50">
+          <li class="nav-item">
+            <a [routerLink]="['/productlist']" class="nav-link" aria-expanded="false">Cakes</a>
+            <!-- <ul class="dropdown-menu bg-purple-ligher-50">
               <li>
                 <a href="#Product-gallery" class="dropdown-item">Front-End</a>
               </li>
@@ -182,7 +180,7 @@
               <li>
                 <a href="#Product-gallery" class="dropdown-item">Full Stack</a>
               </li>
-            </ul>
+            </ul> -->
           </li>
           <li class="nav-item">
             <a href="#Collaborate" class="nav-link">Flowers</a>
@@ -194,12 +192,11 @@
           <li class="nav-item">
             <a href="#Contact" class="nav-link">Personalise</a>
           </li>
-          <li>
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex">
-              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form>
-          </li>
         </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-warning" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </nav>
