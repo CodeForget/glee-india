@@ -132,6 +132,14 @@
             ]
           }
         },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://codeforget.github.io/glee-india/",
+            "name": "Shivam Srivastava",
+            "email": "srivastava998@gmail.com"
+          }
+        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
