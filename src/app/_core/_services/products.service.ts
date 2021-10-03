@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 
 import { Product } from '../_models/product';
+import {Varient} from '../_models/varient.model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,7 @@ export class ProductsService {
     }
 
     getProductVarient(id){
-      return this.http.get<any>(`${this.apiUrl}/api/varient/${id}`);
+      return this.http.get<Varient[]>(`${this.apiUrl}/api/varient/${id}`);
     }
 
 }

@@ -4,6 +4,7 @@ import { forkJoin, Observable } from 'rxjs';
 import { mergeMap, switchMap } from 'rxjs/operators';
 import { ProductsService } from '../../../_core/_services/products.service';
 import { Product } from '../../../_core/_models/product';
+import {Varient} from '../../../_core/_models/varient.model';
 
 
 @Component({
@@ -15,7 +16,8 @@ export class ProductdetailsComponent implements OnInit, AfterViewInit {
 
   pId: number;
   product: Product;
-  varient:any;
+  pVarient:Varient;
+  varient:Varient[];
   private param$:any;
 
   constructor(
@@ -49,6 +51,7 @@ export class ProductdetailsComponent implements OnInit, AfterViewInit {
       console.log(results);
       this.product = results[0];
       this.varient=results[1];
+      this.pVarient=this.varient[0];
       
     });
   }
@@ -58,6 +61,10 @@ export class ProductdetailsComponent implements OnInit, AfterViewInit {
     var main_prodcut_image = document.getElementById('main_product_image') as HTMLImageElement;
     console.log(element);
     main_prodcut_image.src = element.currentTarget.src;
+  }
+
+  onCakeChange(index){
+    this.pVarient=this.varient[index];
   }
 
   ngOnDestroy() {

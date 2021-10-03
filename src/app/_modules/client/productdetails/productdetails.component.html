@@ -51,7 +51,7 @@
             <span class="heart"><i class="bx bx-heart"></i></span>
           </div>
           <div class="mt-2 pr-3 content"></div>
-          <h3>{{product.Sellprice | currency : '&#8377; '}}</h3>
+          <h3>{{pVarient.Price | currency : '&#8377; '}}</h3>
           <div class="ratings d-flex flex-row align-items-center">
             <div class="d-flex flex-row">
               <i class="bx bxs-star"></i> <i class="bx bxs-star"></i>
@@ -67,7 +67,7 @@
             <span class="fw-bold">Cackes</span>
             <div class="d-flex text-white colors">
               <ul id="marker">
-                <li *ngFor="let v of varient" id="'marker-'+v.Varid" class="justify-content-center align-items-center">{{v.Weight}} Kg</li>
+                <li *ngFor="let v of varient; let i = index" [attr.data-index]="i" id="'marker-'+v.Varid" class="justify-content-center align-items-center" (click)="onCakeChange(i)">{{v.Weight}} Kg</li>
               </ul>
             </div>
           </div>
@@ -91,10 +91,10 @@
               <p><b>Product Details:</b></p>
               <ul>
                 <li>Cake Flavour- Truffle</li>
-                <li>Weight- 2 Kg</li>
+                <li>Weight- {{pVarient.Weight}} Kg</li>
                 <li>Shape- Round</li>
                 <li>Serves- 20-24 People</li>
-                <li>Size- 12 inches in Diameter</li>
+                <li>Size- {{pVarient.Size}}</li>
               </ul>
               <p><b>Please Note:</b></p>
               <ul>
