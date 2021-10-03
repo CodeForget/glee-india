@@ -14,7 +14,7 @@
             </ng-template>
             <ng-template let-product pTemplate="listItem">
                 <div class="p-col-12">
-                    <div class="product-list-item cursor" [routerLink]="['/productdetails',product.pid]">
+                    <div class="product-list-item cursor" [routerLink]="['/productdetails',product.pid]" routerLinkActive="active">
                         <img [src]="'./assets/product/'+product.Mainimg" [alt]="product.Mainimg"/>
                         <div class="product-list-detail">
                             <div class="product-name">{{product.Productname}}</div>
@@ -32,7 +32,7 @@
             </ng-template>
             <ng-template let-product pTemplate="gridItem">
                 <div class="p-col-12 p-md-4">
-                    <div class="product-grid-item card">
+                    <div class="product-grid-item card cursor" [routerLink]="['/productdetails',product.pid]" routerLinkActive="active">
                         <div class="product-grid-item-top">
                             <div>
                                 <i class="pi pi-tag product-category-icon"></i>
