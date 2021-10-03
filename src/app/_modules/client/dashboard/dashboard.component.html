@@ -78,10 +78,10 @@
                 <h5 class="mx-5 my-2">All Categories</h5>
             </ng-template>
             <ng-template let-product pTemplate="item">
-                <div class="product-item" [routerLink]="['/productdetails',product.pid]" routerLinkActive="active">
+                <div class="product-item cursor" [routerLink]="['/productdetails',product.pid]" routerLinkActive="active">
                     <div class="product-item-content">
                         <div class="p-mb-3">
-                            <img class="product-image" [src]="product.Mainimg">
+                            <img class="product-image" [src]="'./assets/product/'+product.Mainimg">
                         </div>
                         <div>
                             <h4 class="p-mb-1">{{product.Productname}}</h4>
