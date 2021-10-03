@@ -95,6 +95,10 @@
     margin-bottom: 2rem;
 }
 
+.cursor{
+    cursor:pointer !important;
+}
+
 @media screen and (max-width: 576px) {
 	:host ::ng-deep .product-list-item {
 		flex-direction: column;
