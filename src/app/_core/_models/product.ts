@@ -8,5 +8,5 @@ export interface Product {
     date_add: string;
     active: boolean;
     Mainimg: string;
-    description: string;
+    Description: string;
 }
